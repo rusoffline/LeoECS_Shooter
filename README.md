@@ -1,4 +1,4 @@
-# **Enemy AI ECS Showcase**  
+# **Untiy LeoECS Pet-Project**  
 
 ![Unity](https://img.shields.io/badge/Unity-2021.3%2B-blue)  
 ![LeoECS](https://img.shields.io/badge/LeoECS-v1.0-green)  
