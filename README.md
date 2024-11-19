@@ -65,7 +65,7 @@
    git clone https://github.com/rusoffline/LeoECS_Shooter.git
 
 ## **Контакты**
-- **hh.ru**: [hh.ru резюме](https://ufa.hh.ru/resume/7c0eef23ff02be4b310039ed1f77645a586570)
+- **Resume**: [hh.ru](https://ufa.hh.ru/resume/7c0eef23ff02be4b310039ed1f77645a586570)
 - **Email**: rsultangareev@bk.ru  
 - **Телефон**: +7 929 214 00 97  
 - **WhatsApp**: +7 929 214 00 97  
