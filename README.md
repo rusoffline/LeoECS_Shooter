@@ -7,7 +7,7 @@
 ---
 
 ## **Описание проекта**  
-Этот проект — пет-проект, созданный для демонстрации работы с ECS (Entity-Component-System) архитектурой с использованием фреймворка [LeoECS](https://github.com/Leopotam/ecs.git) и интегратора [LeoECS Unity Integration](https://github.com/Leopotam/ecs-unityintegration.git).  
+Пет-проект, созданный для демонстрации работы с ECS (Entity-Component-System) архитектурой с использованием фреймворка [LeoECS](https://github.com/Leopotam/ecs.git) и интегратора [LeoECS Unity Integration](https://github.com/Leopotam/ecs-unityintegration.git).  
 
 **Цель проекта** — продемонстрировать навыки проектирования и реализации игровой логики на основе ECS, а также опыт работы с Unity в рамках высокоэффективного подхода к управлению данными.  
 
