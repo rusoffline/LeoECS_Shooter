@@ -1,0 +1,321 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Unity Projects\\LeoECS_Shooter\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|D:\\Unity Projects\\LeoECS_Shooter\\assets\\scripts\\enemy\\systems\\testenemycontrolsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\systems\\testenemycontrolsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|D:\\Unity Projects\\LeoECS_Shooter\\assets\\scripts\\ecs\\ecsstartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ecs\\ecsstartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|D:\\Unity Projects\\LeoECS_Shooter\\assets\\scripts\\enemy\\systems\\enemydetectionsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\systems\\enemydetectionsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|D:\\Unity Projects\\LeoECS_Shooter\\assets\\scripts\\enemy\\data\\enemydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\data\\enemydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|D:\\Unity Projects\\LeoECS_Shooter\\assets\\scripts\\enemy\\components\\enemydetectioncomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\components\\enemydetectioncomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|d:\\unity projects\\leoecs_shooter\\assets\\scripts\\enemy\\data\\enemystatedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\data\\enemystatedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity Projects\\LeoECS_Shooter\\assets\\scripts\\enemy\\data\\agentdynamic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\enemy\\data\\agentdynamic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|d:\\unity projects\\leoecs_shooter\\assets\\scripts\\enemy\\systems\\enemystatedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\enemy\\systems\\enemystatedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|D:\\Unity Projects\\LeoECS_Shooter\\assets\\scripts\\state\\services\\stateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\state\\services\\stateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|D:\\Unity Projects\\LeoECS_Shooter\\assets\\scripts\\state\\statecomponents\\states.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\state\\statecomponents\\states.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|D:\\Unity Projects\\LeoECS_Shooter\\assets\\scripts\\_extensions\\debugextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\_extensions\\debugextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|D:\\Unity Projects\\LeoECS_Shooter\\assets\\scripts\\enemy\\systems\\enemyinitsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\systems\\enemyinitsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|D:\\Unity Projects\\LeoECS_Shooter\\assets\\scripts\\interactivity\\systems\\interactableinitsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactivity\\systems\\interactableinitsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity Projects\\LeoECS_Shooter\\Library\\PackageCache\\com.leopotam.ecs@1213c31c9e\\src\\EcsWorld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.leopotam.ecs@1213c31c9e\\src\\EcsWorld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|D:\\Unity Projects\\LeoECS_Shooter\\assets\\scripts\\enemy\\view\\enemyview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\view\\enemyview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|D:\\Unity Projects\\LeoECS_Shooter\\assets\\scripts\\player\\systems\\playerinitsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\systems\\playerinitsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|D:\\Unity Projects\\LeoECS_Shooter\\assets\\scripts\\player\\components\\playercomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\components\\playercomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|D:\\Unity Projects\\LeoECS_Shooter\\assets\\scripts\\enemy\\components\\enemycomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D6B066-92BD-8242-0E3D-DFAD7305590D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\components\\enemycomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EcsStartup.cs",
+              "DocumentMoniker": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\ECS\\EcsStartup.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ECS\\EcsStartup.cs",
+              "ToolTip": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\ECS\\EcsStartup.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ECS\\EcsStartup.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAEEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T15:30:40.279Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EnemyInitSystem.cs",
+              "DocumentMoniker": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Enemy\\Systems\\EnemyInitSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Systems\\EnemyInitSystem.cs",
+              "ToolTip": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Enemy\\Systems\\EnemyInitSystem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\Systems\\EnemyInitSystem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T14:48:55.74Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EnemyDetectionSystem.cs",
+              "DocumentMoniker": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Enemy\\Systems\\EnemyDetectionSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Systems\\EnemyDetectionSystem.cs",
+              "ToolTip": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Enemy\\Systems\\EnemyDetectionSystem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\Systems\\EnemyDetectionSystem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T13:27:06.176Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TestEnemyControlSystem.cs",
+              "DocumentMoniker": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Enemy\\Systems\\TestEnemyControlSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Systems\\TestEnemyControlSystem.cs",
+              "ToolTip": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Enemy\\Systems\\TestEnemyControlSystem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\Systems\\TestEnemyControlSystem.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T15:37:17.057Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EnemyData.cs",
+              "DocumentMoniker": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Enemy\\Data\\EnemyData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Data\\EnemyData.cs",
+              "ToolTip": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Enemy\\Data\\EnemyData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\Data\\EnemyData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T15:55:38.096Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EnemyStateData.cs",
+              "DocumentMoniker": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Enemy\\Data\\EnemyStateData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Data\\EnemyStateData.cs",
+              "ToolTip": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Enemy\\Data\\EnemyStateData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\Data\\EnemyStateData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T14:16:03.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EnemyStateData.cs",
+              "DocumentMoniker": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Enemy\\Systems\\EnemyStateData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Systems\\EnemyStateData.cs",
+              "ToolTip": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Enemy\\Systems\\EnemyStateData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\Systems\\EnemyStateData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T14:10:34.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DebugExtensions.cs",
+              "DocumentMoniker": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\_Extensions\\DebugExtensions.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\_Extensions\\DebugExtensions.cs",
+              "ToolTip": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\_Extensions\\DebugExtensions.cs",
+              "RelativeToolTip": "Assets\\Scripts\\_Extensions\\DebugExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T13:13:43.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AgentDynamic.cs",
+              "DocumentMoniker": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Enemy\\Data\\AgentDynamic.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Data\\AgentDynamic.cs",
+              "ToolTip": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Enemy\\Data\\AgentDynamic.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\Data\\AgentDynamic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T16:07:51.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EnemyDetectionComponent.cs",
+              "DocumentMoniker": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Enemy\\Components\\EnemyDetectionComponent.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Components\\EnemyDetectionComponent.cs",
+              "ToolTip": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Enemy\\Components\\EnemyDetectionComponent.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\Components\\EnemyDetectionComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T15:50:34.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StateService.cs",
+              "DocumentMoniker": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\State\\Services\\StateService.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\State\\Services\\StateService.cs",
+              "ToolTip": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\State\\Services\\StateService.cs",
+              "RelativeToolTip": "Assets\\Scripts\\State\\Services\\StateService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T15:44:04.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "States.cs",
+              "DocumentMoniker": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\State\\StateComponents\\States.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\State\\StateComponents\\States.cs",
+              "ToolTip": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\State\\StateComponents\\States.cs",
+              "RelativeToolTip": "Assets\\Scripts\\State\\StateComponents\\States.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T15:43:17.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EcsWorld.cs",
+              "DocumentMoniker": "D:\\Unity Projects\\LeoECS_Shooter\\Library\\PackageCache\\com.leopotam.ecs@1213c31c9e\\src\\EcsWorld.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.leopotam.ecs@1213c31c9e\\src\\EcsWorld.cs",
+              "ToolTip": "D:\\Unity Projects\\LeoECS_Shooter\\Library\\PackageCache\\com.leopotam.ecs@1213c31c9e\\src\\EcsWorld.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.leopotam.ecs@1213c31c9e\\src\\EcsWorld.cs",
+              "ViewState": "AgIAABkBAAAAAAAAAAAwwDEBAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T14:46:27.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EnemyView.cs",
+              "DocumentMoniker": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Enemy\\View\\EnemyView.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\View\\EnemyView.cs",
+              "ToolTip": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Enemy\\View\\EnemyView.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\View\\EnemyView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T14:45:54.248Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PlayerInitSystem.cs",
+              "DocumentMoniker": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Player\\Systems\\PlayerInitSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Systems\\PlayerInitSystem.cs",
+              "ToolTip": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Player\\Systems\\PlayerInitSystem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\Systems\\PlayerInitSystem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T14:45:02.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "InteractableInitSystem.cs",
+              "DocumentMoniker": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Interactivity\\Systems\\InteractableInitSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactivity\\Systems\\InteractableInitSystem.cs",
+              "ToolTip": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Interactivity\\Systems\\InteractableInitSystem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interactivity\\Systems\\InteractableInitSystem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T13:35:22.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PlayerComponent.cs",
+              "DocumentMoniker": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Player\\Components\\PlayerComponent.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Components\\PlayerComponent.cs",
+              "ToolTip": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Player\\Components\\PlayerComponent.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\Components\\PlayerComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T13:28:38.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "EnemyComponent.cs",
+              "DocumentMoniker": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Enemy\\Components\\EnemyComponent.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Components\\EnemyComponent.cs",
+              "ToolTip": "D:\\Unity Projects\\LeoECS_Shooter\\Assets\\Scripts\\Enemy\\Components\\EnemyComponent.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\Components\\EnemyComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T13:38:16.965Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

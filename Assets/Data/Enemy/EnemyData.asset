@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 585cc8f15a2463148b5cd5ea817e7df9, type: 3}
+  m_Name: EnemyData
+  m_EditorClassIdentifier: 
+  detectionRadius: 20
+  detectionAngle: 160
+  obstaclesLayer:
+    serializedVersion: 2
+    m_Bits: 17
+  attackAnimations:
+  - Zombie_Attack_Hand_Left
+  - Zombie_Attack_Hand_Right
+  idleState:
+    agentSpeed: 0
+    animationClips:
+    - Idle
+    detectionDistance: 0
+    duration: 0
+  walkState:
+    agentSpeed: 0.18
+    animationClips:
+    - Walk
+    detectionDistance: 0
+    duration: 0
+  pursueState:
+    agentSpeed: 0.38
+    animationClips:
+    - Pursue
+    detectionDistance: 15
+    duration: 0
+  chaseState:
+    agentSpeed: 2.1
+    animationClips:
+    - Chase
+    detectionDistance: 3
+    duration: 5
+  attackState:
+    agentSpeed: 0
+    animationClips:
+    - AttackLeft
+    - AttackRight
+    detectionDistance: 1
+    duration: 1.1

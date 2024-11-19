@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79a235b3fd03893408ddd2b82885a842, type: 3}
+  m_Name: RifleData
+  m_EditorClassIdentifier: 
+  itemIcon: {fileID: 21300000, guid: a20b7bcbd7434104db1fd1d0053ab13f, type: 3}
+  itemName: "\u0410\u0432\u0442\u043E\u043C\u0430\u0442"
+  description: 
+  weaponIndex: 2
+  damage: 20
+  distance: 2000
+  force: 2
+  weaponObject: {fileID: 8026020477096539236, guid: f937857e146607441ad770484d61afac,
+    type: 3}
+  isAutomatic: 1
+  fireRate: 600
+  reloadTime: 1.2
+  magazineCapacity: 30
+  requiredAmmo: {fileID: 11400000, guid: 71d936eaa0effd841953461393de6f85, type: 2}
+  shootClip: {fileID: 8300000, guid: 7d13f26332be9934381ffcdb10e3b580, type: 3}
+  reloadClip: {fileID: 8300000, guid: 795b13b817cb2964c8314b08faab4316, type: 3}
+  reactionAnim: Shoot
+  reactionLayer: 2
