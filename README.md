@@ -9,7 +9,9 @@
 ## **Описание проекта**  
 Пет-проект, созданный для демонстрации работы с ECS (Entity-Component-System) архитектурой с использованием фреймворка [LeoECS](https://github.com/Leopotam/ecs.git) и интегратора [LeoECS Unity Integration](https://github.com/Leopotam/ecs-unityintegration.git).  
 
-**Цель проекта** — продемонстрировать навыки проектирования и реализации игровой логики на основе ECS.  
+---
+## **Цель проекта**  
+  - **ECS-архитектура**: Продемонстрировть навыки использования ECS-фреймворка на основе LeoECS.  
 
 ---
 
@@ -43,11 +45,6 @@
 | Universal Render Pipeline (URP) | Последняя версия       |  
 | LeoECS                  | [Репозиторий](https://github.com/Leopotam/ecs.git) |  
 | LeoECS Unity Integration | [Репозиторий](https://github.com/Leopotam/ecs-unityintegration.git) |  
-
----
-
-## **Цель проекта**  
-  - **ECS-архитектура**: Продемонстрировть навыки использования ECS-фреймворка на основе LeoECS.  
 
 ---
 
