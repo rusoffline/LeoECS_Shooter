@@ -33,7 +33,7 @@ MonoBehaviour:
     detectionDistance: 0
     duration: 0
   pursueState:
-    agentSpeed: 0.38
+    agentSpeed: 1
     animationClips:
     - Pursue
     detectionDistance: 15

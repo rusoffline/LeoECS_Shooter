@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class StateService
 {
-    public void SwitchState<TState>(ref EcsEntity entity, float lifetime = 0) where TState : struct
+    public void SwitchState<TState>(ref EcsEntity entity, float duration = 0) where TState : struct
     {
         if (entity.Has<TState>())
             return;
@@ -13,9 +13,9 @@ public class StateService
         entity.Get<TState>();
         entity.Get<EnterState>();
 
-        if(lifetime > 0)
+        if(duration > 0)
         {
-            entity.Replace(new StateLifetime(lifetime));
+            entity.Replace(new StateLifetime(duration));
         }
     }
    

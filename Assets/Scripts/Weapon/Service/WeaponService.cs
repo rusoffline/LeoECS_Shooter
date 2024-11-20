@@ -59,10 +59,11 @@ public class WeaponService
 
     private void TryApplyDamage(GameObject gameObject, int damage)
     {
-        var damageable = gameObject.GetComponentInParent<DamageableObject>();
+        var damageable = gameObject.GetComponentInParent<DamageReceiver>();
         if (damageable != null)
         {
-            damageable.TakeDamage(damage);
+            damageable.ApplyDamage(damage);
+            Debug.Log("I found Damage reciver and applay damage!");
         }
     }
 }

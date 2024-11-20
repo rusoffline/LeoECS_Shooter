@@ -82,6 +82,7 @@ public class EcsStartup : MonoBehaviour
             .OneFrame<PickupNotifEvent>()
             .OneFrame<IteractNotifEvent>()
             .OneFrame<AttackEvent>()
+            .OneFrame<DamageEvent>()
             .Init();
 
         fixUpdateSystem

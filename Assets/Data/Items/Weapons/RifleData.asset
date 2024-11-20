@@ -26,7 +26,7 @@ MonoBehaviour:
   reloadTime: 1.2
   magazineCapacity: 30
   requiredAmmo: {fileID: 11400000, guid: 71d936eaa0effd841953461393de6f85, type: 2}
-  shootClip: {fileID: 8300000, guid: 7d13f26332be9934381ffcdb10e3b580, type: 3}
+  shootClip: {fileID: 8300000, guid: 182587f844588f343ab4f28279d92831, type: 3}
   reloadClip: {fileID: 8300000, guid: 795b13b817cb2964c8314b08faab4316, type: 3}
   reactionAnim: Shoot
   reactionLayer: 2

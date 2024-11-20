@@ -1,8 +1,8 @@
 ﻿public struct StateLifetime
 {
     public float lifetime;
-    public StateLifetime(float lifetime)
+    public StateLifetime(float duration)
     {
-        this.lifetime = lifetime;
+        this.lifetime = duration;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
+using static UnityEngine.UI.Image;
 
 public class WeaponFireSystem : IEcsRunSystem
 {
@@ -8,6 +9,7 @@ public class WeaponFireSystem : IEcsRunSystem
     private EcsFilter<FireContdown> fireCountdownFilter;
     private PlayerData playerData;
     private StateService stateService;
+    private WeaponService weaponService;
 
     public void Run()
     {
@@ -78,16 +80,24 @@ public class WeaponFireSystem : IEcsRunSystem
             weaponEntity.Replace(new FireContdown(60f / firearmData.fireRate));
             playerAnimator.Play(firearmData.reactionAnim, firearmData.reactionLayer);
 
-            var shootCast = new ShootCastEvent()
-            {
-                origin = camera.transform.position,
-                direction = camera.transform.forward,
-                distance = firearmData.distance,
-                force = firearmData.force,
-                damage = firearmData.damage,
-                mask = playerData.weaponInteractableMask
-            };
-            weaponEntity.Replace(shootCast);
+            var origin = camera.transform.position;
+            var direction = camera.transform.forward;
+            var distance = firearmData.distance;
+            var force = firearmData.force;
+            var damage = firearmData.damage;
+            var mask = playerData.weaponInteractableMask;
+
+            weaponService.ShootCast(origin, direction, distance, force, damage, mask);
+            //var shootCast = new ShootCastEvent()
+            //{
+            //    origin = camera.transform.position,
+            //    direction = camera.transform.forward,
+            //    distance = firearmData.distance,
+            //    force = firearmData.force,
+            //    damage = firearmData.damage,
+            //    mask = playerData.weaponInteractableMask
+            //};
+            //weaponEntity.Replace(shootCast);
 
             weaponEntity.Get<AmmoUpdateEvent>();
         }

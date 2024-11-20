@@ -1,21 +1,29 @@
 using Leopotam.Ecs;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class TestEnemyControlSystem : IEcsRunSystem
 {
+    private EcsFilter<EnemyComponent, DamageEvent> damageFilter;
+
     private EcsFilter<EnemyComponent, EnemyDetectionComponent>
         .Exclude<StateLifetime>
-        .Exclude<AttackState>
-        .Exclude<DamageState>
         enemyFilter;
+
     private StateService stateService;
     private EnemyData enemyData;
 
     public void Run()
     {
+        foreach (var dmg in damageFilter)
+        {
+            Debug.Log("TestEnemyControlSystem. DamageFilter");
+            ref var enemyComponent = ref damageFilter.Get1(dmg);
+            ref var enemyEntity = ref damageFilter.GetEntity(dmg);
+
+            enemyComponent.animator.CrossFade("HitReaction", .1f, 1);
+            stateService.SwitchState<DamageEvent>(ref enemyEntity, 1f);
+        }
+
         foreach (var enm in enemyFilter)
         {
             ref var enemyEntity = ref enemyFilter.GetEntity(enm);
@@ -40,7 +48,7 @@ public class TestEnemyControlSystem : IEcsRunSystem
                 }
                 else
                 {
-                    stateService.SwitchState<AttackState>(ref enemyEntity, 1f);
+                    stateService.SwitchState<AttackState>(ref enemyEntity, 1.2f);
                 }
             }
             else
@@ -57,4 +65,5 @@ public class TestEnemyControlSystem : IEcsRunSystem
         }
     }
 }
+
 
