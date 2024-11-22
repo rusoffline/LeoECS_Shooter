@@ -18,13 +18,13 @@ public class ItemMenuScreen : MonoBehaviour, IScreen
     {
         if (gameObject.activeSelf)
         {
-            CloseMenu();
+            CloseItemMenu();
             return false;
         }
         return true;
     }
 
-    public void OpenMenu(InventoryScreen inventoryScreen, InventoryItem inventoryItem)
+    public void OpenItemMenu(InventoryScreen inventoryScreen, InventoryItem inventoryItem)
     {
         this.inventoryScreen = inventoryScreen;
         transform.position = Input.mousePosition;
@@ -32,7 +32,7 @@ public class ItemMenuScreen : MonoBehaviour, IScreen
 
         selectedItem = inventoryItem;
 
-        useButton.gameObject.SetActive(inventoryItem.item.itemData is WeaponData);
+        useButton.gameObject.SetActive(inventoryItem.item.itemData is WeaponData || inventoryItem.item.itemData is MedkitData);
         inspectButton.gameObject.SetActive(true);
         assignWeaponSlotButton.gameObject.SetActive(inventoryItem.item.itemData is WeaponData);
 
@@ -41,7 +41,7 @@ public class ItemMenuScreen : MonoBehaviour, IScreen
         assignWeaponSlotButton.onClick.AddListener(AssignToWeaponSlot);
     }
 
-    public void CloseMenu()
+    public void CloseItemMenu()
     {
         gameObject.SetActive(false);
         useButton.onClick.RemoveAllListeners();
@@ -52,22 +52,27 @@ public class ItemMenuScreen : MonoBehaviour, IScreen
     private void UseItem()
     {
         Debug.Log($"Using {selectedItem.itemName}");
-        if(selectedItem.item.itemData is WeaponData weaponData)
-        {
-            inventoryScreen.entity.Replace(new WeaponEquipEvent(selectedItem.item));
-        }
-        CloseMenu();
+        inventoryScreen.entity.Replace(new UseItemEvent(selectedItem.item));
+        //switch (selectedItem.item.itemData)
+        //{
+        //    case WeaponData weaponData:
+        //        inventoryScreen.entity.Replace(new WeaponEquipEvent(selectedItem.item));
+        //        break;
+        //    case MedkitData mekitData:
+        //        break;
+        //}
+        CloseItemMenu();
     }
 
     private void InspectItem()
     {
         Debug.Log($"Inspecting {selectedItem.itemName}");
-        CloseMenu();
+        CloseItemMenu();
     }
 
     private void AssignToWeaponSlot()
     {
         Debug.Log($"Assigning {selectedItem.itemName} to slot");
-        CloseMenu();
+        CloseItemMenu();
     }
 }

@@ -3,22 +3,12 @@
 [System.Serializable]
 public class EnemyStateData
 {
+    [Header("---StateData---")]
     public float agentSpeed;
-    [SerializeField] private string[] animationClips;
     public float detectionDistance;
     public float duration;
-    public string AnimationName
-    {
-        get
-        {
-            if (animationClips.Length == 0)
-            {
-                return animationClips[0];
-            }
-            else
-            {
-                return animationClips[Random.Range(0, animationClips.Length)];
-            }
-        }
-    }
+    [SerializeField] private string[] animationClips;
+    public int animationLayer;
+    public bool hasAnimation => animationClips.Length > 0;
+    public string AnimationName => (animationClips.Length == 0) ? animationClips[0] : animationClips[Random.Range(0, animationClips.Length)];
 }

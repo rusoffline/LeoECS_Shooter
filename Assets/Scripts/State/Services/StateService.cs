@@ -30,5 +30,6 @@ public class StateService
         entity.Del<AttackState>();
         entity.Del<PursueState>();
         entity.Del<ChaseState>();
+        entity.Del<DamageState>();
     }
 }

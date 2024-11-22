@@ -17,37 +17,85 @@ MonoBehaviour:
   obstaclesLayer:
     serializedVersion: 2
     m_Bits: 17
-  attackAnimations:
-  - Zombie_Attack_Hand_Left
-  - Zombie_Attack_Hand_Right
+  damage: 10
   idleState:
     agentSpeed: 0
+    detectionDistance: 0
+    duration: 0
     animationClips:
     - Idle
+    animationLayer: 0
+  walkState:
+    agentSpeed: 0.25
     detectionDistance: 0
     duration: 0
-  walkState:
-    agentSpeed: 0.18
     animationClips:
     - Walk
-    detectionDistance: 0
-    duration: 0
+    animationLayer: 0
   pursueState:
     agentSpeed: 1
-    animationClips:
-    - Pursue
     detectionDistance: 15
     duration: 0
+    animationClips:
+    - Pursue
+    animationLayer: 0
   chaseState:
     agentSpeed: 2.1
-    animationClips:
-    - Chase
     detectionDistance: 3
     duration: 5
+    animationClips:
+    - Chase
+    animationLayer: 0
   attackState:
     agentSpeed: 0
+    detectionDistance: 1
+    duration: 1.1
     animationClips:
     - AttackLeft
     - AttackRight
-    detectionDistance: 1
-    duration: 1.1
+    animationLayer: 0
+  damageState:
+    agentSpeed: 0
+    detectionDistance: 0
+    duration: 0
+    animationClips:
+    - HitReaction
+    animationLayer: 0
+  deathState:
+    agentSpeed: 0
+    detectionDistance: 0
+    duration: 0
+    animationClips:
+    - Death
+    animationLayer: 0
+  angryClipContainer:
+    clips: []
+  attackClipContainer:
+    clips:
+    - {fileID: 8300000, guid: 5ce6bb262e363834db2b5cdef8a21155, type: 3}
+    - {fileID: 8300000, guid: 4fb45f9472f5e554c82a5a9c7ba4c739, type: 3}
+  damageClipContainer:
+    clips:
+    - {fileID: 8300000, guid: bdb798b20d5ac2f438f3a562f4150019, type: 3}
+    - {fileID: 8300000, guid: 0547b940dba4d964e9e447af1dc0759a, type: 3}
+  screamClipContainer:
+    clips:
+    - {fileID: 8300000, guid: d108e9ae3908d4d479e1e41cca0188a3, type: 3}
+  chaseClipContainer:
+    clips:
+    - {fileID: 8300000, guid: d0dd5a8e1fcf88c4c990c0c54c58a2ea, type: 3}
+    - {fileID: 8300000, guid: 27b98a8c68f991b408c5c6afff25358c, type: 3}
+  deathClipContainer:
+    clips:
+    - {fileID: 8300000, guid: 9df77b70cadc8384ca073a95aebc666f, type: 3}
+    - {fileID: 8300000, guid: 1d92c5ac0e056b045b4461b147f95be5, type: 3}
+  attackHitClipContainer:
+    clips:
+    - {fileID: 8300000, guid: 4886d83b6ac03a14c941d85029289d68, type: 3}
+    - {fileID: 8300000, guid: 6515d10980d321c45b580946d5da3836, type: 3}
+    - {fileID: 8300000, guid: dd718ba69d3a47940a0547924f24b5e4, type: 3}
+    - {fileID: 8300000, guid: 65159b8401c831d4bad584f9f89a54e2, type: 3}
+    - {fileID: 8300000, guid: 9100c0cf32213f5439f8f01ef6fe9f89, type: 3}
+    - {fileID: 8300000, guid: fa5a250ae03eb2d44920a2c460dbe006, type: 3}
+    - {fileID: 8300000, guid: 86b1842302bd4e3458b4e7f0d17aa53e, type: 3}
+    - {fileID: 8300000, guid: c5ca431981637ea458a8d2a881b03611, type: 3}

@@ -7,6 +7,7 @@ public class PlayerInitSystem : IEcsInitSystem
 {
     private EcsWorld world;
     private PlayerSpawner playerSpawner;
+    private PlayerData playerData;
 
     public void Init()
     {
@@ -23,7 +24,8 @@ public class PlayerInitSystem : IEcsInitSystem
         playerComponent.aimTarget = playerViewInit.aimTarget;
         playerComponent.weaponHand = playerViewInit.weaponHand;
         playerComponent.headTransform = playerComponent.animator.GetBoneTransform(HumanBodyBones.Head);
-
+        playerComponent.topAudioSource = playerViewInit.topAudioSource;
+        playerComponent.bottomAudioSource = playerViewInit.bottomAudioSource;
 
         var virtualCamera = new VirtualCameraComponent();
         virtualCamera.mainCamera = Camera.main;
@@ -32,5 +34,7 @@ public class PlayerInitSystem : IEcsInitSystem
         playerEntity.Replace(virtualCamera);
 
         playerEntity.Get<GroundedComponent>();
+
+        playerEntity.Replace(new HealthComponent(playerData.maxHealth));
     }
 }

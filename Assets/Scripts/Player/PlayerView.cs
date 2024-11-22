@@ -21,6 +21,10 @@ public class PlayerView : EntityOwner
 
     public Rig weaponRig;
 
+    [Header("AudioSource:")]
+    public AudioSource topAudioSource;
+    public AudioSource bottomAudioSource;
+
     private void OnValidate()
     {
         animator = gameObject.GetOrAddComponent<Animator>();

@@ -9,4 +9,6 @@ public struct PlayerComponent
     public Vector3 position => transform.position;
     public Transform aimTarget;
     public Transform weaponHand;
+    public AudioSource topAudioSource;
+    public AudioSource bottomAudioSource;
 }

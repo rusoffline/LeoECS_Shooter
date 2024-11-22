@@ -14,7 +14,7 @@ public class UnlockeInteractable : BaseInteractable
     {
         if (isLocked)
         {
-            entity.Replace(new UseItemEvent(requiredItem, 1, () => Unlock(), () => Failed()));
+            entity.Replace(new RequestItemEvent(requiredItem, 1, () => Unlock(), () => Failed()));
             return;
         }
     }

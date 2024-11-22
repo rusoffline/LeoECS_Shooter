@@ -4,9 +4,9 @@ using UnityEngine;
 public class PlayerControlSystem : IEcsRunSystem
 {
     private EcsFilter<InputComponent> inputFilter;
+    private EcsFilter<PlayerComponent, DamageEvent> damageFilter;
     private EcsFilter<PlayerComponent, GroundedComponent>
-        .Exclude<AttackState>
-        .Exclude<DamageState>
+        .Exclude<StateLifetime>
         playerFilter;
     private StateService stateService;
 
@@ -16,16 +16,18 @@ public class PlayerControlSystem : IEcsRunSystem
         {
             ref var input = ref inputFilter.Get1(inp);
 
+            foreach(var dmg in damageFilter)
+            {
+                ref var entity = ref damageFilter.GetEntity(dmg);
+                stateService.SwitchState<DamageState>(ref entity, .5f);
+                entity.Get<HealthUpdateEvent>();
+            }
+
             foreach(var plr in playerFilter)
             {
                 ref var entity = ref playerFilter.GetEntity(plr);
                 ref var player = ref playerFilter.Get1(plr);
                 ref var ground = ref playerFilter.Get2(plr);
-
-                if(entity.Has<DamageState>() || entity.Has<LandState>() || entity.Has<AttackState>())
-                {
-                    continue;
-                }
 
                 if(ground.isGrounded)
                 {

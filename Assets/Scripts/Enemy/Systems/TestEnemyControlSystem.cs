@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class TestEnemyControlSystem : IEcsRunSystem
 {
-    private EcsFilter<EnemyComponent, DamageEvent> damageFilter;
+    private EcsFilter<EnemyComponent, HealthComponent, DamageEvent> damageFilter;
 
     private EcsFilter<EnemyComponent, EnemyDetectionComponent>
-        .Exclude<StateLifetime>
+        .Exclude<StateLifetime, DeathState>
         enemyFilter;
 
     private StateService stateService;
@@ -16,12 +16,21 @@ public class TestEnemyControlSystem : IEcsRunSystem
     {
         foreach (var dmg in damageFilter)
         {
-            Debug.Log("TestEnemyControlSystem. DamageFilter");
             ref var enemyComponent = ref damageFilter.Get1(dmg);
             ref var enemyEntity = ref damageFilter.GetEntity(dmg);
-
-            enemyComponent.animator.CrossFade("HitReaction", .1f, 1);
-            stateService.SwitchState<DamageEvent>(ref enemyEntity, 1f);
+            //test:
+            ref var health = ref damageFilter.Get2(dmg);
+            if (health.currentHealth > 0)
+            {
+                ref var damageEvent = ref damageFilter.Get3(dmg);
+                enemyComponent.agent.SetDestination(damageEvent.source);
+                stateService.SwitchState<DamageState>(ref enemyEntity, 1f);
+            }
+            else
+            {
+               stateService.SwitchState<DeathState>(ref enemyEntity);
+            }
+            //end test
         }
 
         foreach (var enm in enemyFilter)

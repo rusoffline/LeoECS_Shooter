@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class InventoryRequestSystem : IEcsRunSystem
 {
-    private EcsFilter<UseItemEvent> useFilter;
+    private EcsFilter<RequestItemEvent> useFilter;
     private EcsFilter<InventoryComponent> inventoryFilter;
 
     public void Run()
@@ -22,7 +22,8 @@ public class InventoryRequestSystem : IEcsRunSystem
             }
         }
     }
-    public bool TryUseItem(ref EcsFilter<InventoryComponent> inventoryFilter, ref UseItemEvent useItem)
+
+    public bool TryUseItem(ref EcsFilter<InventoryComponent> inventoryFilter, ref RequestItemEvent useItem)
     {
         foreach (var i in inventoryFilter)
         {

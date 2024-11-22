@@ -12,11 +12,13 @@ public class DamageReceiver : MonoBehaviour
         owner = GetComponent<EntityOwner>();
     }
 
-    public void ApplyDamage(int damage)
+    public void ApplyDamage(DamageEvent damage)
     {
         if (owner.entity != EcsEntity.Null)
         {
-            owner.entity.Replace(new DamageEvent(damage));
+            ref var damageEvent = ref owner.entity.Get<DamageEvent>();
+            damageEvent.damage = damage.damage;
+            damageEvent.source = damage.source;
         }
     }
 }

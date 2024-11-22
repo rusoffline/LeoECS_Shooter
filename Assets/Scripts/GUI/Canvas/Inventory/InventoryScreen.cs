@@ -73,6 +73,6 @@ public class InventoryScreen : EntityOwner, IScreen
     {
         Debug.Log(inventoryItem);
         Debug.Log(itemMenuScreen);
-        itemMenuScreen.OpenMenu(this, inventoryItem);
+        itemMenuScreen.OpenItemMenu(this, inventoryItem);
     }
 }

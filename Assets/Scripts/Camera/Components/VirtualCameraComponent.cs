@@ -9,4 +9,5 @@ public struct VirtualCameraComponent
     public Transform virtualCameraTransform => virtualCamera.transform;
     public Transform target;
     public Vector3 rotation;
+    public Vector3 targetPosition;
 }

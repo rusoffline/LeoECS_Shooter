@@ -20,7 +20,7 @@ public class WeaponService
             {
                 hit.rigidbody.AddForce(-hit.normal * force, ForceMode.Impulse);
             }
-            TryApplyDamage(hit.collider.gameObject, damage);
+            TryApplyDamage(hit.collider.gameObject, new DamageEvent(damage, origin));
         }
     }
 
@@ -29,7 +29,7 @@ public class WeaponService
         Collider[] colliders = Physics.OverlapSphere(origin, radius, mask);
         foreach (Collider collider in colliders)
         {
-            TryApplyDamage(collider.gameObject, damage);
+            TryApplyDamage(collider.gameObject, new DamageEvent(damage, origin));
             Debug.Log($"WeaponService. MeleeCast. collider hit = {collider.transform.name}");
 
             Vector3 contactPoint = collider.ClosestPoint(origin);
@@ -37,7 +37,7 @@ public class WeaponService
             impact.transform.position = contactPoint;
             impact.transform.rotation = Quaternion.LookRotation(origin - contactPoint);
         }
-        return (colliders!=null && colliders.Length > 0);
+        return (colliders != null && colliders.Length > 0);
     }
 
     public void ExplosionCast(Vector3 origin, float radius, float force, int damage, LayerMask mask)
@@ -53,11 +53,11 @@ public class WeaponService
                 rb.AddForce(direction.normalized * force, ForceMode.Impulse);
             }
 
-            TryApplyDamage(collider.gameObject, damage);
+            TryApplyDamage(collider.gameObject, new DamageEvent(damage, origin));
         }
     }
 
-    private void TryApplyDamage(GameObject gameObject, int damage)
+    private void TryApplyDamage(GameObject gameObject, DamageEvent damage)
     {
         var damageable = gameObject.GetComponentInParent<DamageReceiver>();
         if (damageable != null)

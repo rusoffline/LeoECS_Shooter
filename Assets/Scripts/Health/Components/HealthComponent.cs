@@ -1,4 +1,9 @@
 ﻿public struct HealthComponent
 {
-    public int health;
+    public int currentHealth;
+
+    public HealthComponent(int health)
+    {
+        this.currentHealth = health; 
+    }
 }

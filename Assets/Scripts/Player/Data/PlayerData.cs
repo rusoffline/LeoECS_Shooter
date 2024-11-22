@@ -11,10 +11,14 @@ public class PlayerData : ScriptableObject
     public float walkSpeed = 2.5f;
     public float jogSpeed = 4.5f;
     public float crouchSpeed = 2f;
-
+    public float targetSmooth = 5f;
+    public int maxHealth = 100;
     public LayerMask groundMask;
     public LayerMask weaponInteractableMask;
     public float visibleDistance = 3f;
     public float interactableDistance = 1.2f;
     public float interactableAngle = 80f;
+    [Header("Voices:")]
+    public AudioClipContainer hurtClipContainer;
+    public AudioClipContainer deathClipContainer;
 }

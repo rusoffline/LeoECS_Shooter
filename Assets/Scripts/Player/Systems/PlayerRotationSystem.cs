@@ -4,7 +4,9 @@ using UnityEngine;
 public class PlayerRotationSystem : IEcsRunSystem
 {
     private EcsFilter<InputComponent> inputFilter;
-    private EcsFilter<PlayerComponent, VirtualCameraComponent> playerFilter;
+    private EcsFilter<PlayerComponent, VirtualCameraComponent> 
+        .Exclude<StateLifetime>
+        playerFilter;
     private PlayerData playerData;
 
     public void Run()

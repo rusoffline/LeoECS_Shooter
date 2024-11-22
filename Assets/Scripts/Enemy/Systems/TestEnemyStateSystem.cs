@@ -1,6 +1,5 @@
 ﻿using Leopotam.Ecs;
-using UnityEngine;
-using Vertx.Debugging;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class TestEnemyStateSystem : IEcsRunSystem
 {
@@ -9,43 +8,43 @@ public class TestEnemyStateSystem : IEcsRunSystem
     private EcsFilter<EnemyComponent, ChaseState, EnterState> chaseEnterState;
     private EcsFilter<EnemyComponent, WalkState, EnterState> walkEnterState;
     private EcsFilter<EnemyComponent, AttackState, EnterState> attackEnterFilter;
+    private EcsFilter<EnemyComponent, DamageState, EnterState> damageEnterFilter;
+    private EcsFilter<EnemyComponent, DeathState, EnterState> deathEnterFilter;
+
     private EnemyData enemyData;
 
     public void Run()
     {
-
-        foreach (var idl in idleEnterState)
-        {
-            ref var enemyComponent = ref idleEnterState.Get1(idl);
-            UpdateEnemyState(enemyComponent, enemyData.idleState);
-        }
-        foreach (var prs in pursueEnterState)
-        {
-            ref var enemyComponent = ref pursueEnterState.Get1(prs);
-            UpdateEnemyState(enemyComponent, enemyData.pursueState);
-        }
-        foreach (var chs in chaseEnterState)
-        {
-            ref var enemyComponent = ref chaseEnterState.Get1(chs);
-            UpdateEnemyState(enemyComponent, enemyData.chaseState);
-        }
-        foreach (var wlk in walkEnterState)
-        {
-            ref var enemyComponent = ref walkEnterState.Get1(wlk);
-            UpdateEnemyState(enemyComponent, enemyData.walkState);
-        }
-        foreach (var atk in attackEnterFilter)
-        {
-            ref var enemyComponent = ref attackEnterFilter.Get1(atk);
-            UpdateEnemyState(enemyComponent, enemyData.attackState);
-        }
+        EnterState(idleEnterState, enemyData.idleState);
+        EnterState(pursueEnterState, enemyData.pursueState);
+        EnterState(chaseEnterState, enemyData.chaseState);
+        EnterState(walkEnterState, enemyData.walkState);
+        EnterState(attackEnterFilter, enemyData.attackState);
+        EnterState(damageEnterFilter, enemyData.damageState);
+        EnterState(deathEnterFilter, enemyData.deathState);
     }
 
-    private void UpdateEnemyState(EnemyComponent enemyComponent, EnemyStateData stateData)
+    private void EnterState(EcsFilter filter, EnemyStateData stateData)
     {
-        enemyComponent.agent.isStopped = stateData.agentSpeed == 0;
-        enemyComponent.agent.speed = stateData.agentSpeed;
-        enemyComponent.animator.CrossFade(stateData.AnimationName, .15f);
+        foreach (var flt in filter)
+        {
+            ref var entity = ref filter.GetEntity(flt);
+            ref var enemyComponent = ref entity.Get<EnemyComponent>();
+            if (entity.Has<DeathState>())
+            {
+                enemyComponent.agent.enabled = false;
+                enemyComponent.obstacleCollider.enabled = false;
+            }
+            else
+            {
+                enemyComponent.agent.isStopped = stateData.agentSpeed == 0;
+                enemyComponent.agent.speed = stateData.agentSpeed;
+            }
+            if (stateData.hasAnimation)
+            {
+                enemyComponent.animator.CrossFade(stateData.AnimationName, .15f, stateData.animationLayer);
+            }
+        }
     }
 }
 

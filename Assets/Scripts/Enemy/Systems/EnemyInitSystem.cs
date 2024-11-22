@@ -12,7 +12,6 @@ public class EnemyInitSystem : IEcsInitSystem
         {
             var enemyEntity = world.NewEntity();
             enemy.entity = enemyEntity;
-            Debug.Log(enemy.name);
 
             var enemyComponent = new EnemyComponent();
 
@@ -20,8 +19,13 @@ public class EnemyInitSystem : IEcsInitSystem
             enemyComponent.animator = enemy.animator;
             enemyComponent.headTransform = enemyComponent.animator.GetBoneTransform(HumanBodyBones.Head);
             enemyComponent.agent = enemy.agent;
+            enemyComponent.obstacleCollider = enemy.obstacleCollider;
+            enemyComponent.topAudioSource = enemy.topAudioSource;
+            enemyComponent.bottomAudioSource = enemy.bottomAudioSource;
 
             enemyEntity.Replace(enemyComponent);
+
+            enemyEntity.Replace(new HealthComponent(100));
         }
     }
 }

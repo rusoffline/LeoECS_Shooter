@@ -9,4 +9,7 @@ public struct EnemyComponent
     public Transform headTransform;
     public Animator animator;
     public NavMeshAgent agent;
+    public CapsuleCollider obstacleCollider;
+    public AudioSource topAudioSource;
+    public AudioSource bottomAudioSource;
 }

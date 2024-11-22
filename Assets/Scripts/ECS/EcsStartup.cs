@@ -44,6 +44,7 @@ public class EcsStartup : MonoBehaviour
             .Add(new InventoryUISystem())
             .Add(new InventoryPickupSystem())
             .Add(new InventoryRequestSystem())
+            .Add(new InventoryUseItemSystem())
             .Add(new InventorySyncSystem())
             //weapons:
             //.Add(new WeaponTestSystem())
@@ -51,25 +52,33 @@ public class EcsStartup : MonoBehaviour
             .Add(new WeaponInputSystem())
             .Add(new WeaponFireSystem())
             .Add(new WeaponReloadSystem())
-            .Add(new WeaponCastSystem())
+            //.Add(new WeaponCastSystem())
+            //animation hitting:
             .Add(new MeleeHitSystem())
+            .Add(new EnemyHitSystem())
             //damage:
+            .Add(new HealthSystem())
             //player:
             .Add(new StateLifetimeSystem())
             .Add(new GroundCheckSystem())
             .Add(new PlayerAnimatorInputSystem())
             .Add(new PlayerControlSystem())
             .Add(new PlayerStateSystem())
+            .Add(new PlayerVoiceSystem())
             //enemy:
             .Add(new EnemyDetectionSystem())
             .Add(new TestEnemyControlSystem())
             .Add(new TestEnemyStateSystem())
-            //hud:
+            .Add(new EnemyVoiceSystem())
+            .Add(new EnemyHitAudioSystem())
+            //gui:
             .Add(new AmmoCounterSystem())
+            .Add(new PlayerHealthBarSystem())
             .Add(new PickupNotificationSystem())
             .Add(new InteractNotificationSystem())
             //events:
             .OneFrame<PickupItemEvent>()
+            .OneFrame<RequestItemEvent>()
             .OneFrame<UseItemEvent>()
             .OneFrame<InventorySyncEvent>()
             .OneFrame<EnterState>()
@@ -79,10 +88,12 @@ public class EcsStartup : MonoBehaviour
             .OneFrame<ShootCastEvent>()
             .OneFrame<ExplosionCastEvent>()
             .OneFrame<AmmoUpdateEvent>()
+            .OneFrame<HealthUpdateEvent>()
             .OneFrame<PickupNotifEvent>()
             .OneFrame<IteractNotifEvent>()
             .OneFrame<AttackEvent>()
             .OneFrame<DamageEvent>()
+            .OneFrame<ImpactEvent>()
             .Init();
 
         fixUpdateSystem
