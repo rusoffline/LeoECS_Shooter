@@ -13,11 +13,12 @@ public abstract class BaseInteractable : EntityOwner
 
     protected virtual void Start()
     {
-        iconView = GetComponentInChildren<IconInteractableView>();  
+        iconView = GetComponentInChildren<IconInteractableView>();
         triggerCollider = gameObject.GetOrAddComponent<SphereCollider>();
         triggerCollider.isTrigger = true;
         triggerCollider.radius = 4f;
         gameObject.layer = 8;
+        iconView.gameObject.SetActive(false);
     }
 
     protected virtual void OnTriggerEnter(Collider other)
@@ -31,6 +32,15 @@ public abstract class BaseInteractable : EntityOwner
     {
         visitior = null;
         entity.Del<InteractableStay>();
+        iconView.gameObject.SetActive(false);
+    }
+
+    protected void ShowIcon()
+    {
+        iconView.gameObject.SetActive(visitior != null);
+    }
+    protected void HideIcon()
+    {
         iconView.gameObject.SetActive(false);
     }
 }

@@ -4,7 +4,43 @@ using UnityEngine;
 
 public abstract class BaseDoorAction : MonoBehaviour
 {
-    public abstract void OpenForward();
-    public abstract void OpenBackward();
-    public abstract void Close();
+    [SerializeField] private AudioClip openClip;
+    [SerializeField] private AudioClip closeClip;
+    private bool isOpen;
+
+    public virtual void OpenForward()
+    {
+        if (isOpen)
+            return;
+
+        PlayClip(openClip);
+        isOpen = true;
+    }
+
+    public virtual void OpenBackward()
+    {
+        if (isOpen)
+            return;
+
+        PlayClip(openClip);
+        isOpen = true;
+    }
+
+    public virtual void Close()
+    {
+        if (!isOpen)
+            return;
+
+        PlayClip(closeClip);
+        isOpen = false;
+    }
+
+    private void PlayClip(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            AudioSource.PlayClipAtPoint(clip, transform.position);
+
+        }
+    }
 }

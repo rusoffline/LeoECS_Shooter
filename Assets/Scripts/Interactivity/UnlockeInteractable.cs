@@ -1,7 +1,7 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
 
-public class UnlockeInteractable : BaseInteractable
+public abstract class UnlockeInteractable : BaseInteractable
 {
     public ItemData requiredItem;
     public bool isLocked;
@@ -23,12 +23,20 @@ public class UnlockeInteractable : BaseInteractable
     {
         isLocked = false;
         Debug.Log($"{name} unlocked!");
-        entity.Replace(new IteractNotifEvent(unlockedText));
+        entity.Replace(new InteractNotifEvent(unlockedText));
+        if (unlcokClip != null)
+        {
+            AudioSource.PlayClipAtPoint(unlcokClip, iconView.transform.position);
+        }
     }
 
     public void Failed()
     {
         Debug.Log($"{name} unlock failed!");
-        entity.Replace(new IteractNotifEvent(lockedText));
+        entity.Replace(new InteractNotifEvent(lockedText));
+        if (failedClip != null)
+        {
+            AudioSource.PlayClipAtPoint(failedClip, iconView.transform.position);
+        }
     }
 }

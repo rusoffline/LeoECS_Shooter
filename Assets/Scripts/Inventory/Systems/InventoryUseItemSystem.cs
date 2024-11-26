@@ -35,7 +35,7 @@ public class InventoryUseItemSystem : IEcsRunSystem
                     }
                     else
                     {
-                        inventoryEntity.Replace(new IteractNotifEvent("Здоровье полное (Аптечка не исползована)"));
+                        inventoryEntity.Replace(new InteractNotifEvent("Здоровье полное (Аптечка не исползована)"));
                     }
                     break;
             }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class InteractNotificationSystem : IEcsRunSystem
 {
-    private EcsFilter<IteractNotifEvent> notifFilter;
+    private EcsFilter<InteractNotifEvent> notifFilter;
     private UIManager uiManager;
 
     public void Run()

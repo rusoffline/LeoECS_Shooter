@@ -8,8 +8,8 @@ public class DoorInteractable : UnlockeInteractable
     public BaseDoorAction doorAction;
     private bool isDoorOpen = false;
 
-    public AudioSource openClip;
-    public AudioSource closeClip;
+    public AudioClip openClip;
+    public AudioClip closeClip;
 
     public override void Interact()
     {
@@ -32,24 +32,35 @@ public class DoorInteractable : UnlockeInteractable
                 OpenDoorsBackward();
             }
             isDoorOpen = true;
-            iconView.gameObject.SetActive(false);
+            HideIcon();
         }
     }
 
     private void OpenDoorsForward()
     {
         doorAction?.OpenForward();
+        PlayClip(openClip);
     }
 
     private void OpenDoorsBackward()
     {
         doorAction?.OpenBackward();
+        PlayClip(openClip);
     }
 
     public void CloseDoors()
     {
         doorAction?.Close();
         isDoorOpen = false;
+        PlayClip(closeClip);
+    }
+
+    private void PlayClip(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            AudioSource.PlayClipAtPoint(clip, transform.position);
+        }
     }
 
     protected override void OnTriggerExit(Collider other)

@@ -33,6 +33,9 @@ public class InventoryRequestSystem : IEcsRunSystem
             {
                 if (inventory.items[j].itemData == useItem.itemData && inventory.items[j].count >= useItem.count)
                 {
+                    if (useItem.itemData is WeaponData)
+                        return true;
+
                     var item = inventory.items[i];
                     item.count -= useItem.count;
                     inventory.items[i] = item;

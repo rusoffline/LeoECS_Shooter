@@ -38,6 +38,10 @@ public class EcsStartup : MonoBehaviour
             .Add(new InventoryInitSystem())
             .Add(new InteractableInitSystem())
             .Add(new EnemyInitSystem())
+            .Add(new ElectrocityInitSystem())
+            .Add(new BridgeInitSystem())
+            //game
+            .Add(new GameOverSystem())
             //interact:
             .Add(new PlayerInteractiveSystem())
             //invetory:
@@ -90,10 +94,13 @@ public class EcsStartup : MonoBehaviour
             .OneFrame<AmmoUpdateEvent>()
             .OneFrame<HealthUpdateEvent>()
             .OneFrame<PickupNotifEvent>()
-            .OneFrame<IteractNotifEvent>()
+            .OneFrame<InteractNotifEvent>()
             .OneFrame<AttackEvent>()
             .OneFrame<DamageEvent>()
             .OneFrame<ImpactEvent>()
+            .OneFrame<TryUseElectropowerEvent>()
+            .OneFrame<AddElectropowerEvent>()
+            .OneFrame<GameOverEvent>()
             .Init();
 
         fixUpdateSystem

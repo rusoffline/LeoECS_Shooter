@@ -58,12 +58,12 @@ public class OpenDoorWithScript : BaseDoorAction
     {
         Quaternion targetRotation = Quaternion.Euler(0f, targetAngle, 0f);
 
-        while (Quaternion.Angle(doorTransform.rotation, targetRotation) > 0.1f)
+        while (Quaternion.Angle(doorTransform.localRotation, targetRotation) > 0.1f)
         {
-            doorTransform.rotation = Quaternion.Slerp(doorTransform.rotation, targetRotation, speed * Time.deltaTime);
+            doorTransform.localRotation = Quaternion.Slerp(doorTransform.localRotation, targetRotation, speed * Time.deltaTime);
             yield return null;
         }
 
-        doorTransform.rotation = targetRotation;
+        doorTransform.localRotation = targetRotation;
     }
 }
