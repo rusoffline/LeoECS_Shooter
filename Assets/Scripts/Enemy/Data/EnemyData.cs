@@ -23,7 +23,5 @@ public class EnemyData : ScriptableObject
     public AudioClipContainer screamClipContainer;
     public AudioClipContainer chaseClipContainer;
     public AudioClipContainer deathClipContainer;
-    [Header("Attack Hit:")]
     public AudioClipContainer attackHitClipContainer;
-
 }

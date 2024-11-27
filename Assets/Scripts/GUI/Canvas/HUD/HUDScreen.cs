@@ -1,14 +1,9 @@
 using UnityEngine;
 
-public class HUDScreen : MonoBehaviour, IScreen
+public class HUDScreen : MonoBehaviour
 {
     public AmmoCounter ammoCounter;
     public HealthBar healthBar;
-
-    public bool TryClose()
-    {
-        return false;
-    }
     
     private void Start()
     {

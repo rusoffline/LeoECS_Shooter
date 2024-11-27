@@ -6,17 +6,13 @@ public class DoorInteractable : UnlockeInteractable
     public bool autoClose = true;
 
     public BaseDoorAction doorAction;
-    private bool isDoorOpen = false;
-
-    public AudioClip openClip;
-    public AudioClip closeClip;
 
     public override void Interact()
     {
         Debug.Log($"Interact with Door, name is {transform.name}");
         base.Interact();
 
-        if (isDoorOpen || isLocked) return;
+        if (doorAction.IsOpen || isLocked) return;
 
         if (visitior != null)
         {
@@ -25,41 +21,13 @@ public class DoorInteractable : UnlockeInteractable
 
             if (dotProduct > 0)
             {
-                OpenDoorsForward();
+                doorAction?.OpenForward();
             }
             else
             {
-                OpenDoorsBackward();
+                doorAction?.OpenBackward();
             }
-            isDoorOpen = true;
             HideIcon();
-        }
-    }
-
-    private void OpenDoorsForward()
-    {
-        doorAction?.OpenForward();
-        PlayClip(openClip);
-    }
-
-    private void OpenDoorsBackward()
-    {
-        doorAction?.OpenBackward();
-        PlayClip(openClip);
-    }
-
-    public void CloseDoors()
-    {
-        doorAction?.Close();
-        isDoorOpen = false;
-        PlayClip(closeClip);
-    }
-
-    private void PlayClip(AudioClip clip)
-    {
-        if (clip != null)
-        {
-            AudioSource.PlayClipAtPoint(clip, transform.position);
         }
     }
 
@@ -67,9 +35,9 @@ public class DoorInteractable : UnlockeInteractable
     {
         base.OnTriggerExit(other);
 
-        if (autoClose && isDoorOpen)
+        if (autoClose && doorAction.IsOpen)
         {
-            CloseDoors();
+            doorAction?.Close();
         }
     }
 }

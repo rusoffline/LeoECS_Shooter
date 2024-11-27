@@ -71,6 +71,7 @@ MonoBehaviour:
   iconView: {fileID: 8453654637140718942}
   itemData: {fileID: 11400000, guid: 86fec448f97c29e4f9f6fd57a69fa527, type: 2}
   count: 1
+  pickupClip: {fileID: 8300000, guid: b3bba9932b8056d459cb7b030d9fe6b9, type: 3}
 --- !u!1001 &2406121104760480394
 PrefabInstance:
   m_ObjectHideFlags: 0

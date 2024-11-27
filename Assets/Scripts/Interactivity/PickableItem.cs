@@ -5,6 +5,7 @@ public class PickableItem : BaseInteractable
 {
     public ItemData itemData;
     public int count;
+    public AudioClip pickupClip;
 
     public override void Interact()
     {
@@ -16,6 +17,12 @@ public class PickableItem : BaseInteractable
         entity.Destroy();
         Destroy(gameObject);
         Debug.Log($"Pickable.OnPickupSuccess. Name = {transform.name}");
+
+
+        if (pickupClip != null)
+        {
+            AudioSource.PlayClipAtPoint(pickupClip, transform.position);
+        }
     }
 
     private void OnPickupFailed()

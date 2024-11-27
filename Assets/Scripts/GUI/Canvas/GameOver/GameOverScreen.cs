@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameOverScreen : MonoBehaviour
+public class GameOverScreen : MonoBehaviour, IScreen
 {
     [SerializeField] private GameObject winScreen;
     [SerializeField] private GameObject loseScreen;
+
+    public bool IsActive => winScreen.gameObject.activeSelf || loseScreen.gameObject.activeSelf;
 
     private void Start()
     {
@@ -17,5 +19,19 @@ public class GameOverScreen : MonoBehaviour
     {
         winScreen.SetActive(isWin);
         loseScreen.SetActive(!isWin);
+    }
+
+    public void ShowScreen()
+    {
+    }
+
+    public bool CheckActive()
+    {
+        return gameObject.activeSelf;
+    }
+
+    public bool TryHideScreen()
+    {
+        return false;
     }
 }

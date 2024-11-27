@@ -53,3 +53,7 @@ MonoBehaviour:
     poolablePrefab: {fileID: 4960460032138168474, guid: b68d55529528c9a46ab856ccc837d470,
       type: 3}
     initialSize: 15
+  - tag: MeatImpact
+    poolablePrefab: {fileID: 8020049517876420183, guid: 8a6eb6b2de9114c4992c397d7a64815b,
+      type: 3}
+    initialSize: 15

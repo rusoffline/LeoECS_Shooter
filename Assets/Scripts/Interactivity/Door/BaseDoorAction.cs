@@ -6,7 +6,8 @@ public abstract class BaseDoorAction : MonoBehaviour
 {
     [SerializeField] private AudioClip openClip;
     [SerializeField] private AudioClip closeClip;
-    private bool isOpen;
+    [SerializeField] private bool isOpen;
+    public bool IsOpen => isOpen;
 
     public virtual void OpenForward()
     {
@@ -40,7 +41,6 @@ public abstract class BaseDoorAction : MonoBehaviour
         if (clip != null)
         {
             AudioSource.PlayClipAtPoint(clip, transform.position);
-
         }
     }
 }

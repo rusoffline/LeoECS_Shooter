@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class WeaponSlotMenuScreen : MonoBehaviour, IScreen
+public class WeaponSlotMenuScreen : MonoBehaviour
 {
     public Button slot01Button;
     public Button slot02Button;

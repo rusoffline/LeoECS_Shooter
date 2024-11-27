@@ -551,6 +551,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ed6edb5696c63c74e9d7d9a72f79f5f1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Meat
+      objectReference: {fileID: 0}
     - target: {fileID: 1082271958561512970, guid: ed6edb5696c63c74e9d7d9a72f79f5f1,
         type: 3}
       propertyPath: m_Layer

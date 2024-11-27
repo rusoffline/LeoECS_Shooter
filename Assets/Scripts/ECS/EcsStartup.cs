@@ -41,15 +41,14 @@ public class EcsStartup : MonoBehaviour
             .Add(new ElectrocityInitSystem())
             .Add(new BridgeInitSystem())
             //game
-            .Add(new GameOverSystem())
             //interact:
             .Add(new PlayerInteractiveSystem())
             //invetory:
-            .Add(new InventoryUISystem())
+            //.Add(new InventoryUISystem())
             .Add(new InventoryPickupSystem())
             .Add(new InventoryRequestSystem())
             .Add(new InventoryUseItemSystem())
-            .Add(new InventorySyncSystem())
+            //.Add(new InventorySyncSystem())
             //weapons:
             //.Add(new WeaponTestSystem())
             .Add(new WeaponEquipSystem())
@@ -69,6 +68,7 @@ public class EcsStartup : MonoBehaviour
             .Add(new PlayerControlSystem())
             .Add(new PlayerStateSystem())
             .Add(new PlayerVoiceSystem())
+            .Add(new PlayerDeathSystem())
             //enemy:
             .Add(new EnemyDetectionSystem())
             .Add(new TestEnemyControlSystem())
@@ -80,6 +80,9 @@ public class EcsStartup : MonoBehaviour
             .Add(new PlayerHealthBarSystem())
             .Add(new PickupNotificationSystem())
             .Add(new InteractNotificationSystem())
+            .Add(new ScreenManagerSystem())
+            //inventory sync
+            .Add(new InventorySyncSystem())
             //events:
             .OneFrame<PickupItemEvent>()
             .OneFrame<RequestItemEvent>()
@@ -100,7 +103,7 @@ public class EcsStartup : MonoBehaviour
             .OneFrame<ImpactEvent>()
             .OneFrame<TryUseElectropowerEvent>()
             .OneFrame<AddElectropowerEvent>()
-            .OneFrame<GameOverEvent>()
+            //.OneFrame<GameOverComponent>()
             .Init();
 
         fixUpdateSystem

@@ -4,7 +4,6 @@ using UnityEngine;
 public class TestEnemyControlSystem : IEcsRunSystem
 {
     private EcsFilter<EnemyComponent, HealthComponent, DamageEvent> damageFilter;
-
     private EcsFilter<EnemyComponent, EnemyDetectionComponent>
         .Exclude<StateLifetime, DeathState>
         enemyFilter;

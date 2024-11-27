@@ -71,6 +71,7 @@ MonoBehaviour:
   iconView: {fileID: 141943128592954294}
   itemData: {fileID: 11400000, guid: f7dbead2a9dc8fd428f40c5ed4858385, type: 2}
   count: 500
+  pickupClip: {fileID: 8300000, guid: b3bba9932b8056d459cb7b030d9fe6b9, type: 3}
 --- !u!1 &8440415717199840511
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,7 +133,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: e50d9218bfa60da49bb26979fb21e884, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

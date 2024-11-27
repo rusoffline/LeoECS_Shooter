@@ -1146,6 +1146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91b1abadd0c2c2d4bb057096a615836e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  openClip: {fileID: 8300000, guid: f42f47b976eee3c419ad7ffd95ee50e6, type: 3}
+  closeClip: {fileID: 8300000, guid: c52f0b0e644464ca0b066d80091a5c8f, type: 3}
+  isOpen: 0
   leftDoor: {fileID: 2142108734489130819}
   rightDoor: {fileID: 3344936275741085558}
   openAngle: 90

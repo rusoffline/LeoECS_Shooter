@@ -12,6 +12,7 @@ public class GameModeService
 
         entity.Del<PlayMode>();
         entity.Del<MenuMode>();
+        entity.Del<InventoryMode>();
 
         entity.Get<TMode>();
 

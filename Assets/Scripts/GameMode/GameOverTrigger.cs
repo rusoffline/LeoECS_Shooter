@@ -18,6 +18,6 @@ public class GameOverTrigger : EntityBridge
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("OnTrigger!");
-        entity.Replace(new GameOverEvent(true));
+        entity.Replace(new GameOverComponent(true));
     }
 }

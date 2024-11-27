@@ -10,11 +10,8 @@ public class WeaponService
         if (Physics.Raycast(origin, direction, out RaycastHit hit, distance, mask))
         {
             Debug.Log("WeaponCastSystem: " + hit.collider.name);
-            Vector3 point = hit.point;
-            Quaternion rotation = Quaternion.LookRotation(hit.normal);
-            var impact = ObjectPoolManager.Instance.GetObject("StoneImpact");
-            impact.transform.position = point;
-            impact.transform.rotation = rotation;
+
+            Impact(ref hit);
 
             if (hit.rigidbody != null)
             {
@@ -64,6 +61,30 @@ public class WeaponService
         {
             damageable.ApplyDamage(damage);
             Debug.Log("I found Damage reciver and applay damage!");
+        }
+    }
+
+    private void Impact(ref RaycastHit hit)
+    {
+        Impact(hit.transform, hit.point, Quaternion.LookRotation(hit.normal));
+    }
+
+    private void Impact(Transform imactedObject, Vector3 impactPoint, Quaternion impactRotation)
+    {
+        PoolableObject impact;
+        switch (imactedObject.tag)
+        {
+            case "Meat":
+                impact = ObjectPoolManager.Instance.GetObject("MeatImpact");
+                break;
+            default:
+                impact = ObjectPoolManager.Instance.GetObject("StoneImpact");
+                break;
+        }
+        if (impact != null)
+        {
+            impact.transform.position = impactPoint;
+            impact.transform.rotation = impactRotation;
         }
     }
 }

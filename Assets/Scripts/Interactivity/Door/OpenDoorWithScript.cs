@@ -14,6 +14,7 @@ public class OpenDoorWithScript : BaseDoorAction
 
     public override void OpenForward()
     {
+        base.OpenForward();
         if (leftDoor != null)
         {
             if (leftDoorCoroutine != null) StopCoroutine(leftDoorCoroutine);
@@ -28,6 +29,7 @@ public class OpenDoorWithScript : BaseDoorAction
 
     public override void OpenBackward()
     {
+        base.OpenBackward();
         if (leftDoor != null)
         {
             if (leftDoorCoroutine != null) StopCoroutine(leftDoorCoroutine);
@@ -42,6 +44,7 @@ public class OpenDoorWithScript : BaseDoorAction
 
     public override void Close()
     {
+        base.Close();
         if (leftDoor != null)
         {
             if (leftDoorCoroutine != null) StopCoroutine(leftDoorCoroutine);

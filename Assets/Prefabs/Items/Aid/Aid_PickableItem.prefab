@@ -292,6 +292,7 @@ MonoBehaviour:
   iconView: {fileID: 5980388096500387006}
   itemData: {fileID: 11400000, guid: b048b45aad8059b4da9f9eca2d547f5e, type: 2}
   count: 1
+  pickupClip: {fileID: 8300000, guid: b3bba9932b8056d459cb7b030d9fe6b9, type: 3}
 --- !u!1 &5888104012304522579
 GameObject:
   m_ObjectHideFlags: 0

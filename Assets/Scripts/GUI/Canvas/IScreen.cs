@@ -1,4 +1,6 @@
 ﻿public interface IScreen
 {
-    bool TryClose();
+    void ShowScreen();
+    bool IsActive { get; }
+    bool TryHideScreen();
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ItemMenuScreen : MonoBehaviour, IScreen
+public class ItemMenuScreen : MonoBehaviour
 {
     private InventoryScreen inventoryScreen;
     public Button useButton;
@@ -12,17 +12,6 @@ public class ItemMenuScreen : MonoBehaviour, IScreen
     public Button assignWeaponSlotButton;
 
     private InventoryItem selectedItem;
-
-
-    public bool TryClose()
-    {
-        if (gameObject.activeSelf)
-        {
-            CloseItemMenu();
-            return false;
-        }
-        return true;
-    }
 
     public void OpenItemMenu(InventoryScreen inventoryScreen, InventoryItem inventoryItem)
     {

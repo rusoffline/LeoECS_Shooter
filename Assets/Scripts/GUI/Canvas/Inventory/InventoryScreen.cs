@@ -9,6 +9,8 @@ public class InventoryScreen : EntityOwner, IScreen
     public ItemMenuScreen itemMenuScreen;
     public List<Item> itemsForTest;
 
+    public bool IsActive => gameObject.activeSelf || itemMenuScreen.gameObject.activeSelf;
+
     private void Start()
     {
         uiItems = GetComponentsInChildren<InventoryItem>().ToList();
@@ -22,16 +24,6 @@ public class InventoryScreen : EntityOwner, IScreen
     private void OnEnable()
     {
         itemMenuScreen.gameObject.SetActive(false);
-    }
-
-    public bool TryClose()
-    {
-        if(itemMenuScreen.gameObject.activeSelf)
-        {
-            itemMenuScreen.TryClose();
-            return false;
-        }
-        return true;
     }
 
     public void Sync(List<Item> itemList)
@@ -74,5 +66,21 @@ public class InventoryScreen : EntityOwner, IScreen
         Debug.Log(inventoryItem);
         Debug.Log(itemMenuScreen);
         itemMenuScreen.OpenItemMenu(this, inventoryItem);
+    }
+
+    public bool TryHideScreen()
+    {
+        if(itemMenuScreen.gameObject.activeSelf)
+        {
+            itemMenuScreen.gameObject.SetActive(false);
+            return false;
+        }
+        gameObject.SetActive(false);
+        return true;
+    }
+
+    public void ShowScreen()
+    {
+        gameObject.SetActive(true);
     }
 }
